@@ -1,0 +1,33 @@
+<h3 class="home-title">
+  الرئيسية
+</h3>
+<igx-input-group type="search" class="search-bar-home">
+  <igx-prefix>
+    <igx-icon class="icon-22sna">
+      search
+    </igx-icon>
+  </igx-prefix>
+  <input type="search" [(ngModel)]="value" placeholder="ابحث عن دروس، اختبارات، أو مصادر..." igxInput />
+  <label igxLabel>Search</label>
+</igx-input-group>
+<igx-card class="welcome-card">
+  <igx-card-header>
+    <h3 igxCardHeaderTitle>
+      أهلاً بك في برنامج البكالوريا
+    </h3>
+    <h5 igxCardHeaderSubtitle>
+      دليلك الشامل للنجاح
+    </h5>
+  </igx-card-header>
+  <igx-card-content class="body-content">
+    <div class="column-layout column-layout-dmfhxl">
+      <p class="welcome-text">
+        هنا تجد كل ما تحتاجه للتحضير لامتحانات البكالوريا. تصفح الدروس، جرب الاختبارات، وتابع تقدمك.
+      </p>
+    </div>
+  </igx-card-content>
+  <igx-card-actions class="actions-content">
+    <ng-container igxStart></ng-container>
+    <ng-container igxEnd></ng-container>
+  </igx-card-actions>
+</igx-card>

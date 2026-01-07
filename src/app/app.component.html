@@ -1,0 +1,68 @@
+<igx-navbar class="baccalaureate-nav-bar">
+  <igx-navbar-action>
+    <button igxIconButton="flat" [igxToggleAction]="baccalaureateNavDrawer">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      برنامج البكالوريا
+    </h6>
+  </igx-navbar-title>
+  <button igxIconButton="flat">
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout horizontal-group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" width="320px" #baccalaureateNavDrawer class="baccalaureate-nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem [routerLink]="[`/ig-view`]" [active]="isActive(`/ig-view`)">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>الرئيسية</span>
+      </div>
+      <div igxDrawerItem [routerLink]="[`/ig-view-1`]" [active]="isActive(`/ig-view-1`)">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>الدروس</span>
+      </div>
+      <div igxDrawerItem [routerLink]="[`/ig-view-2`]" [active]="isActive(`/ig-view-2`)">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>الاختبارات</span>
+      </div>
+      <div igxDrawerItem [routerLink]="[`/ig-view-3`]" [active]="isActive(`/ig-view-3`)">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>النتائج</span>
+      </div>
+      <div igxDrawerItem [routerLink]="[`/ig-view-4`]" [active]="isActive(`/ig-view-4`)">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>المصادر</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="page-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
